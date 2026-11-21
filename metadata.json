@@ -1,0 +1,6 @@
+{
+  "name": "TermiCore",
+  "description": "Precision DIN-rail terminal blocks and industrial electrical connection systems across Spring Cage, Screw Clamp, Spring Support, Bolt, and Distribution series.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-alabaster: #F4F6F8;
+  --color-mist: #EAEFF4;
+  --color-card: #FFFFFF;
+  --color-carbon: #0D121B;
+  --color-graphite: #182230;
+  --color-slate-ink: #334155;
+  --color-steel: #64748B;
+  --color-silver: #CBD5E1;
+  --color-teal-accent: #0F766E;
+  --color-teal-bright: #0D9488;
+  --color-furrow-clay: #C2A687;
+}
+
+:root {
+  --bg-primary: #F4F6F8;
+  --bg-secondary: #EAEFF4;
+  --bg-elevated: #FFFFFF;
+  --text-primary: #0D121B;
+  --text-secondary: #334155;
+  --accent-primary: #0F766E;
+  --accent-hover: #0D9488;
+  --steel-grey: #64748B;
+  --border-subtle: #CBD5E1;
+  --border-accent-hover: rgba(15, 118, 110, 0.45);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: #0D121B;
+    background-color: #F4F6F8;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: #F4F6F8;
+    color: #0D121B;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #0F766E;
+    outline-offset: 2px;
+  }
+}
+
+/* Furrow theme textured linear grooves and architectural grid */
+.bg-furrow-grooves {
+  background-image:
+    linear-gradient(to right, rgba(13, 18, 27, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 18, 27, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.bg-furrow-grooves-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
